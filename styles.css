@@ -1,0 +1,160 @@
+/* Estilos modernos para página de futebol */
+
+:root {
+  --primary-color: #4CAF50; /* Verde campo */
+  --secondary-color: #2E7D32; /* Verde escuro */
+  --accent-color: #FFC107; /* Amarelo */
+  --text-color: #FFFFFF; /* Branco */
+  --background-color: #1B5E20; /* Fundo escuro */
+  --card-bg: #424242; /* Cinza escuro para cards */
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--background-color));
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px var(--shadow);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.categories li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.categories li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.categories a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.categories a:hover {
+  color: var(--accent-color);
+}
+
+.category-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-item {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.video-item h4 {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .videos-container {
+    grid-template-columns: 1fr;
+  }
+}
